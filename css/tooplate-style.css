@@ -1,0 +1,950 @@
+/*
+
+Template 2087 Kalay
+
+http://www.tooplate.com/view/2087-kalay
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400, 500, 600, 700');
+
+body {
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*---------------------------------------
+  Typorgraphy              
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 45px;
+  line-height: normal;
+}
+
+h2 {
+  color: #2b2b2b;
+  font-size: 35px;
+  line-height: 52px;
+  margin-top: 0px;
+}
+
+h3 {
+  color: #282828;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: #353535;
+  font-size: 20px;
+}
+
+p {
+  color: #878787;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+}
+
+.bg-grey {
+  background: #2b2b2b !important;
+}
+
+.white-color {
+  color: #f0f0f0;
+}
+
+
+
+/*---------------------------------------
+  Buttons               
+-----------------------------------------*/
+
+.section-btn {
+  background: #5163ab;
+  border: 1px solid #fff;
+  color: #f0f0f0;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  padding: 18px 32px;
+  margin-top: 42px;
+  text-transform: uppercase;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.section-btn:focus,
+.section-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+
+/*---------------------------------------
+  nav bar            
+-----------------------------------------*/
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.container4 {
+    display: inline-block;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+[id^=fade] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+	background-color: #923b9e;
+    margin-bottom: 0;
+    position: fixed;
+}
+
+#logo {
+	display: block;
+	padding: 0 30px;
+	float: left;
+	font-size:20px;
+	line-height: 60px;
+    font-weight: 600;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background-color: #923b9e;
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #923b9e; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: #923b9e; 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px; 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+.container3 {
+    display: hidden;
+    float: right;
+    
+}
+
+
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 900px) {
+
+	#logo {
+		display: block;
+		padding-left: 2vw;
+		width: 100%;
+		text-align: center;
+		float: left;
+	}
+    
+    .container3 {
+        display: inline-block;
+    }
+
+	nav {
+		margin: 0;
+        position: fixed;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		background-color: #923b9e;
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+	}
+
+	.toggle:hover {
+		background-color: #923b9e;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+    
+    [id^=fade]:checked + #simon-pic {
+        opacity: 0;
+    }
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: #923b9e;
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+  
+  
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #923b9e; 
+	}
+
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #923b9e;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
+
+
+
+
+.menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+/*#nav {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    z-index: 1;
+}
+
+
+.navbar ul li {
+    display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px;
+	position: relative;
+}
+
+.navbar ul li a {
+
+	line-height: 80%;
+	display: block;
+	color: #0a0a0a;
+    font-weight: 400;
+    font-size: 3vh;
+	text-transform: uppercase;
+	position: relative;
+}
+
+
+
+#bar {
+    position: relative;
+    background-color: #923b9e;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    list-style-type: none;
+    vertical-align: middle;
+}*/
+
+
+/*---------------------------------------
+  General               
+-----------------------------------------*/
+
+#events {
+    text-align: center;
+    padding-top: 5vh;
+}
+
+
+.event-logo {
+    width: 80%;
+    height: 10vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5vh;
+    overflow: hidden;
+}
+
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #757557;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+
+#home a {
+	color: black;
+}
+
+a:hover, a:active, a:focus {
+  color: #000000;
+  outline: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+.section-title {
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+#service, #about, #team,
+#contact, #membership, #partners, footer {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#partners {
+    text-align: center;
+}
+
+#service, #events, #contact {
+  background: #ad2c2c;
+  text-align: center;
+}
+
+#service {
+  background-image: "images/Business.jpg";
+}
+
+
+
+
+/*---------------------------------------
+  Pre loader section              
+-----------------------------------------*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: none repeat scroll 0 0 #ffffff;
+}
+
+.spinner {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  position: relative;
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #454545;
+  border-top-color: #ffffff;
+  animation: spinner .9s linear infinite;
+}
+
+@-webkit-@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+
+
+/*---------------------------------------
+  Home section              
+-----------------------------------------*/
+
+#home {
+    background-image: url('../images/home-bg.jpg');
+    background-size: 100vw;
+    background-attachment: scroll;
+    background-position: center center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: left;
+    padding-top: 10vh;
+}
+
+
+
+
+/*---------------------------------------
+  Service section              
+-----------------------------------------*/
+
+.service-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 42px 22px;
+  position: relative;
+  top: 0;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+    overflow: hidden;
+}
+
+#events .service-thumb {
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .service-thumb {
+        height: 570px;
+    }
+    
+}
+
+.table_self {
+    display: table;
+    width: 100%;
+}
+
+.service-thumb:hover {
+  background: #2b2b2b;
+  top: -5px;
+}
+
+.service-thumb:hover .fa,
+.service-thumb:hover h4 {
+  color: #ffffff;
+}
+
+.service-thumb h4 {
+  padding-bottom: 5px;
+}
+
+.service-thumb .fa {
+  color: #7682cc;
+  font-size: 62px;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 22px;
+}
+
+.bg-grey .fa {
+  color: #ffffff;
+}
+
+
+
+/*---------------------------------------
+  About section              
+-----------------------------------------*/
+
+#about {
+  padding-top: 100px;
+}
+
+.about-image-thumb img {
+  border-radius: 5px;
+  margin-bottom: 22px;
+}
+
+.about-image-thumb .social-icon li a {
+  background: #f0f0f0;
+}
+
+.about-thumb {
+  padding: 32px 12px;
+}
+
+.about-thumb p {
+  padding: 2px 0;
+}
+
+
+
+/*---------------------------------------
+  Work section              
+-----------------------------------------*/
+
+.work-thumb {
+  margin: 22px 0 12px 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.work-thumb img {
+  border-radius: 5px;
+}
+
+.work-thumb h2 {
+  font-size: 25px;
+}
+
+.work-thumb-overlay {
+  position: absolute;
+  background: #7682cc;
+  border-radius: 5px;
+  cursor: crosshair;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding: 82px 42px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+@media (hover: none) {
+     .work-thumb-overlay {
+        position: relative;
+        opacity: 1;
+    }
+}
+
+.work-thumb:hover .work-thumb-overlay {
+  opacity: 1;
+}
+
+
+
+
+
+/*---------------------------------------
+  Contact section              
+-----------------------------------------*/
+
+.contact-info .fa {
+  padding-right: 5px;
+}
+
+#contact, #membership .form-control {
+  border: none;
+  border-bottom: 2px solid #f0f0f0;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+#contact .form-control:focus {
+  border-bottom-color: #999999;
+}
+
+#contact input {
+  height: 55px;
+}
+
+#contact button#submit {
+  background: #2b2b2b;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  height: 50px;
+  margin-top: 24px;
+}
+
+#contact button#submit:hover {
+  background: #7682cc;
+  color: #ffffff;
+}
+
+
+
+/*---------------------------------------
+  Footer section              
+-----------------------------------------*/
+
+footer {
+  background: #923b9e;
+  text-align: center;
+  padding: 120px 0;
+}
+
+footer p {
+  padding-bottom: 16px;
+}
+
+
+
+/*---------------------------------------
+  Social icon             
+-----------------------------------------*/
+
+.social-icon {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.social-icon li {
+  display: inline-block;
+  list-style: none;
+}
+
+.social-icon li a {
+  background: #ffffff;
+  border-radius: 100%;
+  color: #454545;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  margin: 0px 6px 10px 6px;
+}
+
+.social-icon li a:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.1);
+  top: -5px;
+}
+
+
+
+/*---------------------------------------
+  Mobile Responsive styles              
+-----------------------------------------*/
+
+@media (max-width: 980px) {
+  #home {
+    height: 55vh;
+      width: 100vw;
+      background: url(../images/home-bg.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  
+  }
+    
+    #nacue-logo-hp {
+        width: 15vh;
+        position: relative;
+        margin-left: 42.5vw;
+        margin-right: 42.5vw;
+        top: 5vh;
+    }
+
+  .service-thumb {
+    margin-top: 12px;
+    margin-bottom: 22px;
+  }
+
+  .contact-info {
+    margin-top: 22px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #home {
+    height: 85vh;
+      width: 100vw;
+ 
+  }
+}
+
+
+@media (max-width: 580px) {
+
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  #home {
+    height: 95vh;
+      width: 100vw;
+  
+  }
+
+  .contact-info {
+    margin-top: 42px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  #home {
+    height: 125vh;
+    }
+}
+
+.partner-link {
+    color: #353535;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+
+.logos {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3vh;
+}
+
+.bio {
+    font-size: 3vh;
+    font-weight: 300;
+    color: #000000;
+    display: block;
+    
+}
+
+#simon-pic {
+    z-index: 2;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    #hcont {
+        background-image: url(../images/home-bg.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+    }
+}
+
+#nacue-logo-hp {
+    width: 15vw; 
+    max-width: 150px;
+}
+
+
+
+.about-image-thumb {
+    padding: 32px;
+}
+
+#fsb_logo {
+    position: relative;
+    top: 10px;
+    margin: auto;
+}
+
+#button {
+	background-color: #923b9e;
+	
+}
+
+#toolkit_button {
+	border-radius: 8px;
+	background-color: #923b9e;
+	font-size: 25px;
+	color: white;
+	
+}

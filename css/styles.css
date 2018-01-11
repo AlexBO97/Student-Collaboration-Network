@@ -1,0 +1,25 @@
+#service, #events, #contact {
+    background-image: url("../images/topography.png");
+    text-align: center;
+  }
+
+  #events {
+    text-align: center;
+    padding-top: 5vh;
+}
+#events .service-thumb {
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+footer {
+    background: #923b9e;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  footer p {
+    padding-bottom: 0px;
+    color: white;
+  }
+  
